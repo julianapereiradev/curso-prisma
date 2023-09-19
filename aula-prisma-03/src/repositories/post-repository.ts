@@ -7,6 +7,7 @@ export type CreatePost = Omit<Post, "id">
 
 async function getPosts() {
 const resultGet = await prisma.post.findMany()
+console.log("result get", resultGet)
 return resultGet
 }
 
